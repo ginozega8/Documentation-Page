@@ -1,0 +1,269 @@
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width">
+    <title id="title">HTML5 - The definitive guide</title>
+    <link rel="stylesheet" href="user-manual-style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Condensed&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <nav id="navbar">
+    <header id="nav-header">HTML<strong style="color: white;">5</strong></header>
+    <ul>
+        <li><a class="nav-link" href="#Introducing_HTML5">Introducing HTML5</a></li>
+        <li>
+          <a class="nav-link" href="#The_Story_of_HTML5"
+            >The Story of HTML5</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#XHTML_1.0:_Getting_Strict">XHTML 1.0: Getting Strict</a>
+        </li>
+        <li><a class="nav-link" href="#XHTML_2:_The_Unexpected_Failure">XHTML 2: The Unexpected Failure</a></li>
+        <li><a class="nav-link" href="#Three_Key_Principles_of_HTML5">Three Key Principles of HTML5</a></li>
+        <li>
+          <a class="nav-link" href="#Your_First_Look_at_HTML5_Markup">Your First Look at HTML5 Markup</a>
+        </li>
+        <li><a class="nav-link" href="#The_HTML5_Doctype">The HTML5 Doctype</a></li>
+        <li><a class="nav-link" href="#Character_Encoding">Character Encoding</a></li>
+        <li><a class="nav-link" href="#The_Language">The Language</a></li>
+        <li><a class="nav-link" href="#The_Loosened_Rules">The Loosened Rules</a></li>
+        <li>
+          <a class="nav-link" href="#Adapted_Elements">Adapted Elements</a>
+        </li>
+        <li><a class="nav-link" href="#Tweaked_Elements">Tweaked Elements</a></li>
+        <li>
+          <a class="nav-link" href="#Standardized_Elements"
+            >Standardized Elements</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Removed_Elements">Removed Elements</a></li>
+        <br>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+
+        <section class="main-section" id="Introducing_HTML5">
+            <header id="Introduction">Introducing HTML5</header>
+            <p><q><strong>if HTML were a movie, HTML5 would be its surprise twist.</strong></q></p>
+
+            <p>HTML wasn’t meant to survive into the 21st century. The official 
+                web standards organization, called the W3C (short for World Wide Web Consortium), 
+                left HTML for dead way back in 1998. The W3C pinned its future plans on a modernized 
+                successor called XHTML. It took a group of disenfranchised rebels to resuscitate HTML 
+                and lay the groundwork for the features that you’ll explore in this book.</p>
+
+                <p>In this chapter, you’ll get the scoop on why HTML died, and how it came back to life. You’ll
+                     learn about HTML5’s philosophy and features, and you’ll consider the thorny issue of browser
+                      support. You’ll also get your first look at a bona fide HTML5 document—both in its simplest
+                       form, and as a more practical template that you can use as a starting point for any website.</p>
+        </section>
+
+        <section class="main-section" id="The_Story_of_HTML5">
+            <header id="story">The Story of HTML5</header>
+                <p>As you know, HTML is the language you use to write web pages. The basic idea of HTML—that you use 
+                    elements to structure your content—hasn’t changed since the Web’s earliest days. In fact, even the
+                     oldest web pages still work perfectly well in the most modern web browsers (including several 
+                     browsers that didn’t exist at the time, like Firefox and Chrome).</p>
+
+                <p>Being old and successful also carries some sizable risks—namely, everyone wants to replace you. In 1998,
+                     the W3C stopped working on HTML and attempted to improve it with an XML-powered successor called XHTML 1.0.</p>
+        </section>
+
+        <section class="main-section" id="XHTML_1.0:_Getting_Strict">
+            <header id="getting-strict">XHTML 1.0: Getting Strict</header>
+
+            <p>XHTML has most of the same syntax conventions as HTML, but it enforces stricter rules. Much of the sloppy markup that traditional HTML permitted just isn’t acceptable in XHTML.
+                For example, suppose you want to italicize the last word in a heading, like so:</p>
+                <code>&lt;h1&gt;The Life of a &lt;i&gt;Duck&lt;/i&gt; &lt;/h1&gt;</code>
+            <p>And you accidentally swap the final two tags:</p>
+            <code>&lt;h1&gt;The Life of a &lt;i&gt;Duck&lt;/h1&gt; &lt;/i&gt; </code>
+
+            <p>When a browser encounters this slightly messed-up markup, it can figure out what you really want.
+                 It italicizes the last word, without even a polite complaint. However, the mismatched
+                 tags break the official rules of XHTML. If you plug your page into an XHTML validator 
+                 (or use a web design tool like Dreamweaver), you’ll get a warning that points out your mistake. 
+                 From a web design point of view, this is helpful—it lets you catch minor mistakes that might 
+                 cause inconsistent results on different browsers, or might cause bigger problems when you
+                  edit and enhance the page.</p>
+        </section>
+
+        <section class="main-section" id="XHTML_2:_The_Unexpected_Failure">
+            <header id="failure">XHTML 2: The Unexpected Failure</header>
+
+            <p>The solution was supposed to be XHTML 2. It was set to tighten 
+                up the error-handling rules, forcing browsers to reject invalid XHTML 2 pages. 
+                XHTML 2 also threw out many of the quirks and conventions it had inherited from HTML. 
+                For example, the system of numbered headings (&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, and so on) was super-seded
+                     by a new &lt;h1&gt; element, whose significance depended on its position in a web page. Similarly,
+                          the &lt;a&gt; element was eclipsed by a feature that let web developers transform any element
+                               into a link, and the &lt;img&gt; element lost its alt attribute in favor of a new way to
+                                supply alternate content.</p>
+
+            <p>These changes were typical of XHTML 2. From a theoretical point of view, they were cleaner and made more sense. 
+                From a practical point of view, they forced everyone to change the way they wrote web pages (to say nothing of 
+                updating the web pages they already had), without adding new functionality to make all the work worthwhile. And 
+                along the way, XHTML 2 dumped a few well-worn elements that some web designers still loved, like &lt;b&gt; (for bold text),
+                    &lt;i&gt; (for italics), and &lt;iframe&gt; (for embedding one web page inside another).</p>
+
+            <p>But perhaps the worst problem was the glacial pace of change. Development on XHTML 2 dragged on for five years, and developer 
+                enthusiasm slowly leaked away.</p>
+        </section>
+
+        <section class="main-section" id="Three_Key_Principles_of_HTML5">
+            <header id="back-from-the-dead">Three Key Principles of HTML5</header>
+            <p>By this point, you’re probably eager to get going with a real HTML5 page. But first, it’s worth climbing into the minds of the
+                 people who built HTML5. Once you understand the philosophy behind the language, the quirks, complexities, and occasional headaches
+                  that you’ll encounter in this book will make a whole lot more sense.</p>
+
+            <ol>
+                <li>Don’t Break the Web</li>
+                <p>“Don’t break the Web” means that a standard shouldn’t introduce changes that make other people’s web pages stop working. This rarely happens.</p>
+
+                <p>“Don’t break the Web” also means that a standard shouldn’t casually change the rules, and in the process deem perfectly good current-day
+                     web pages to be obsolete (even if they still work). For example, XHTML 2 broke the Web because it demanded an immediate, dramatic shift
+                      in the way web pages were written. Yes, old pages would still work—thanks to the backward compatibility that’s built into browsers. But
+                       if you wanted to prepare for the future and keep your website up to date, you’d be forced to waste countless hours correcting the “mistakes”
+                        that XHTML 2 had banned.</p>
+
+                <li>Pave the Cowpaths</li>
+                <p>A cowpath is the rough, heavily trodden track that gets people from one point to another. A cowpath exists because it’s being used. It might not
+                     be the best possible way to move around, but at some point it was the most practical working solution.</p>
+                     <p>HTML5 aims to standardize these unofficial (but widely used) techniques. It may not be as neat as laying down a nicely paved expressway with
+                          a brand-new approach, but it has a better chance of succeeding. That’s because switching over to new techniques may be beyond the ability or
+                           interest of the average website designer. And worse, new techniques may not work for visitors who are using older browsers. XHTML 2 tried to
+                            drive people off the cowpaths, and it failed miserably.</p>
+
+                <li>Be Practical</li>
+                <p>This principle is simple: Changes should have a practical purpose. And the more demanding the change, the bigger the payoff needs to be. Web developers
+                     may prefer nicely designed, consistent, quirk-free standards, but that isn’t a good enough reason to change a language that’s already been used to create
+                      several billion documents. Of course, it’s still up to someone to decide whose concerns are the most important. A good clue is to look at what web pages
+                       are already doing—or trying to do.</p>
+            </ol>
+
+        </section>
+
+        <section class="main-section" id="Your_First_Look_at_HTML5_Markup">
+            <header id="first-look">Your First Look at HTML5 Markup</header>
+            <p>Here’s one of the simplest HTML5 documents you can create. It starts with the HTML5 doctype (a special code that’s explained on The HTML5 Doctype), 
+                followed by a title, and then followed by some content. In this case, the content is a single paragraph of text:</p>
+
+                <code>&lt;!DOCTYPE html&gt;
+                    &lt;title&gt;A Tiny HTML Document&lt;/title&gt;
+                    &lt;p&gt;Let's rock the browser, HTML5 style.&lt;/p&gt;</code>
+            
+            <p>You already know what this looks like in a browser, but if you need reassuring, check out Figure 1-1.</p>
+            <img src="https://www.oreilly.com/library/view/html5-the-missing/9781449312671/httpatomoreillycomsourceoreillyimages1731626.png" alt="results">
+        </section>
+
+        <section class="main-section" id="The_HTML5_Doctype">
+            <header id="doctype">The HTML5 Doctype</header>
+            <p>The first line of every HTML5 document is a special code called doctype. It clearly announces to anyone who’s reading the document markup
+                 that HTML5 content follows:</p>
+                 <code>&lt;!DOCTYPE html&gt;</code>
+                 <p>The first thing you’ll notice about the HTML5 doctype is its striking simplicity. Compare it, for example, to the ungainly doctype that
+                      web developers need when using XHTML 1.0 strict:</p>
+                      <code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</code>
+                <p>Even professional web developers were forced to copy-and-paste the XHTML doctype from one document to another. But the HTML5 doctype is short 
+                    and snappy, so you won’t have much trouble typing it in by hand.</p>
+        </section>
+
+        <section class="main-section" id="Character_Encoding">
+            <header id="char-en">Character Encoding</header>
+            <p>The character encoding is the standard that tells a computer how to convert your text into a sequence of bytes when it’s stored in a file 
+                (and how to convert it back again when the file is opened). For historical reasons, there are many different character encodings in the world.
+                 Today, virtually all English websites use an encoding called UTF-8, which is compact, fast, and supports all the non-English characters you’ll ever need.</p>
+
+                 <p>Often, the web server that hosts your pages is configured to tell browsers that it’s serving out pages with a certain kind of encoding. However, because you 
+                     can’t be sure that your web server will take this step (unless you own it), and because browsers can run into an obscure security issue when they attempt to guess
+                      a page’s encoding, you should always add encoding information to your markup.</p>
+
+                      <p>HTML5 makes that easy to do. All you need to do is add the meta element shown below at the very beginning of your &lt;head&gt; section (or right after the doctype,
+                           if you don’t define the &lt;head&gt; element):</p>
+
+                           <code>
+                            &lt;head&gt; <br>
+                            &lt;meta charset "utf-8"&gt; <br>
+                            &lt;title&gt;A Tiny HTML Document&lt;title&gt; <br>
+                            &lt;/head&gt;
+                        </code>
+
+        </section>
+
+        <section class="main-section" id="The_Language">
+            <header id="language">The Language</header>
+            <p>It’s considered good style to indicate your web page’s natural language.
+                 This information is occasionally useful to other people—for example, search
+                  engines can use it to filter search results so they include only pages that
+                   match the language of the searcher.</p>
+
+                   <p>To specify the language of some content, you use the lang attribute on any
+                        element, along with the appropriate language code. That’s en for plain English,
+                         but you can find more exotic language codes at http://people.w3.org/rishida/utils/subtags.</p>
+            <p>The easiest way to add language information to your web page is to use the &lt;html&gt; element with the lang attribute:</p>
+
+            <code>&lt;html lang="en"&gt;&lt;/html&gt;</code>
+        </section>
+
+        <section class="main-section" id="The_Loosened_Rules">
+            <header id="loosend">The Loosened Rules</header>
+            <p>Here’s a quick summary of what constitutes good
+                 HTML5 style (and what conventions the examples in this book follow, even if they don’t have to):</p>
+
+                 <ul>
+                     <li>Including the optional &lt;html&gt;, &lt;body&gt;, and &lt;head&gt; elements.</li>
+                     <li>Using lowercase tags.</li>
+                     <li>Using quotation marks around attribute values.</li>
+                 </ul>
+        </section>
+
+        <section class="main-section" id="Adapted_Elements">
+            <header id="a-elements">Adapted Elements</header>
+            <p>HTML5 has another odd trick: sometimes it adapts an old feature for a new purpose. For example, consider the
+                &lt;small&gt; element, which had fallen out of favor as a clumsy way to shrink the font size of a block of text 
+                     (a task more properly done with style sheets). But unlike the discarded &lt;big&gt; element, the HTML5 keeps the
+                     &lt;small&gt; element, with a change. Now, the &lt;small&gt; element represents “small print”—for example, the legalese
+                               that no one wants you to read at the bottom of a contract:</p>
+        </section>
+
+        <section class="main-section" id="Tweaked_Elements">
+            <header id="t-elements">Tweaked Elements</header>
+            <p>HTML5 also shifts the rules of a few elements. Usually, these changes are minor details that only HTML wonks will notice, 
+                but occasionally they have deeper effects. One example is the rarely used &lt;address&gt; element, which is not suitable 
+                    (despite the name) for postal addresses. Instead, the &lt;address&gt; element has the narrow purpose of providing 
+                        contact information for the creator of the HTML document, usually as an email address or website link:</p>
+        </section>
+
+        <section class="main-section" id="Standardized_Elements">
+            <header id="s-elements">Standardized Elements</header>
+
+            <p>HTML5 also adds supports for a few elements that were supported but weren’t
+                 officially welcome in the HTML or XHTML language. One of the best-known examples is &lt;embed&gt;, 
+                    which is used all over the Web as an all-purpose way to shoehorn a plug-in into a page.
+                A more exotic example is &lt;wbr&gt;, which indicates an optional word break—in other words, a 
+                place where the browser can split a line if the word is too long to fit in its container:</p>
+
+        </section>
+
+        <section class="main-section" id="Removed_Elements">
+            <header id="r-elements">Removed Elements</header>
+
+            <p>Although HTML5 adds new elements, it also boots a few out of the official family. These elements will keep working in browsers, but any decent HTML5 validator will smoke them out of their hiding places and complain loudly (HTML5 Validation).
+
+                Most obviously, HTML5 keeps the philosophy (first cooked up with XHTML) that presentational elements
+                 are not welcome in the language. Presentational elements are elements that are simply there to add
+                  formatting to web pages, and even the greenest web designer knows that’s a job for style sheets.
+                   Rejects include elements that professional developers haven’t use in years. HTML’s presentational
+                         attributes died the same death, so there’s no reason to rehash them all here.</p>
+        </section>
+        
+
+
+    </main>
+
+</body>
